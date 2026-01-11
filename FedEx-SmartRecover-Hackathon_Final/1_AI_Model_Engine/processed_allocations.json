@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "timestamp": "2026-01-07T20:55:02.074661",
+    "version": "SmartRecover v2.0",
+    "kpis": {
+      "Portfolio_Value": "$744,500",
+      "Expected_Recovery_Value": "$470,384",
+      "Commission_Savings_90d": "$75,600",
+      "Auto_Allocation_Rate": "100.0%",
+      "High_Risk_Cases": 0,
+      "Avg_Confidence_Score": "0.86"
+    },
+    "governance_flags": {
+      "data_quality_score": 0.94,
+      "fairness_variance": 0.08,
+      "retraining_eligible": true
+    }
+  },
+  "allocations": [
+    {
+      "tokenized_id": "FED-bf48e46b",
+      "amount": 125000,
+      "p2p_score": 78.85,
+      "p2p_confidence": 0.8725,
+      "assigned_agency": "FedEx Internal Team",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-ad32f045",
+      "amount": 3000,
+      "p2p_score": 57.4,
+      "p2p_confidence": 0.89,
+      "assigned_agency": "DCA_Beta_Digital",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-49584ece",
+      "amount": 450000,
+      "p2p_score": 60.5,
+      "p2p_confidence": 0.875,
+      "assigned_agency": "DCA_Alpha_Legal",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-4122fa15",
+      "amount": 25000,
+      "p2p_score": 81.69999999999999,
+      "p2p_confidence": 0.845,
+      "assigned_agency": "FedEx Internal Team",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-780cd0d7",
+      "amount": 80000,
+      "p2p_score": 32.4,
+      "p2p_confidence": 0.81,
+      "assigned_agency": "DCA_Alpha_Legal",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-5c20a4cd",
+      "amount": 1500,
+      "p2p_score": 73.6,
+      "p2p_confidence": 0.86,
+      "assigned_agency": "DCA_Beta_Digital",
+      "requires_manual_review": false
+    },
+    {
+      "tokenized_id": "FED-898ed348",
+      "amount": 60000,
+      "p2p_score": 84.0,
+      "p2p_confidence": 0.85,
+      "assigned_agency": "FedEx Internal Team",
+      "requires_manual_review": false
+    }
+  ]
+}

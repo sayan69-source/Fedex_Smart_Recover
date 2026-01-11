@@ -1,0 +1,43 @@
+{
+  "workflow_name": "FedEx_SmartRecover_Orchestrator_V_Final",
+  "trigger": {
+    "type": "Recurrence",
+    "interval": "24 Hours",
+    "source": "FedEx_Legacy_System_Export"
+  },
+  "configuration": {
+    "source": "config/thresholds.yaml",
+    "description": "Externalized thresholds for region-aware compliance."
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "action": "Ingest_And_Validate",
+      "description": "Reads CSV and runs Python Validation Layer. Invalid rows sent to 'Data_Quality_Queue'."
+    },
+    {
+      "step_id": 2,
+      "action": "Run_Hybrid_AI_Engine",
+      "method": "Azure_Function_Call",
+      "output": "JSON_Allocations_With_KPIs"
+    },
+    {
+      "step_id": 3,
+      "action": "Governance_Check",
+      "condition": "If 'requires_manual_review' == True",
+      "true_action": "Route to 'Human_Review_Queue' (Do NOT send to DCA)",
+      "false_action": "Proceed to Step 4"
+    },
+    {
+      "step_id": 4,
+      "action": "Secure_Routing",
+      "logic": "Route to DCA Portal via Secure Gateway using Tokenized IDs"
+    },
+    {
+      "step_id": 5,
+      "action": "Feedback_Loop",
+      "frequency": "Weekly",
+      "description": "Ingest 'Actual_Recovery_Data' to update ML weights in Hybrid Model"
+    }
+  ]
+}

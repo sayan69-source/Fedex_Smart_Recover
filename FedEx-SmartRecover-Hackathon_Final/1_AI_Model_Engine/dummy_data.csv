@@ -1,0 +1,8 @@
+account_id,amount,days_overdue,customer_segment,dispute_history
+FX-1001,125000,45,Enterprise,0
+FX-1002,3000,120,Retail,0
+FX-1003,450000,90,SME,1
+FX-1004,25000,30,Retail,0
+FX-1005,80000,180,Enterprise,1
+FX-1006,1500,60,Retail,0
+FX-1007,60000,40,SME,0

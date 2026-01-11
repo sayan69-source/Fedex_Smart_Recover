@@ -1,0 +1,28 @@
+# Business Rules - Configurable without deployment
+allocation_rules:
+  high_p2p_threshold: 75
+  high_value_cutoff: 5000
+  low_value_cutoff: 500
+  high_confidence_threshold: 0.7
+
+exception_handling:
+  p2p_critical_threshold: 10
+  amount_high_risk: 100000
+
+sla_tiers:
+  high_priority_threshold: 80
+  low_priority_threshold: 20
+  high_priority_hours: 24
+  standard_hours: 48
+  low_priority_hours: 72
+
+regional_adjustments:
+  US:
+    legal_dispute_penalty: 25
+  EU:
+    legal_dispute_penalty: 30  # GDPR complexity
+
+governance:
+  data_quality_threshold: 0.9
+  retraining_approval_required: true
+  fairness_variance_limit: 0.15
